@@ -26,17 +26,17 @@ body {
   margin: 0px;
   nav {
     ul {
-      list-style: none;    /* odstraní tečky */
-      padding: 0;          /* odstraní odsazení vlevo */
-      margin: 0;           /* odstraní margin */
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
     li {
-      color: inherit;      /* žádná vlastní barva, zdědí barvu rodiče */
-      text-decoration: none; /* odstraní podtržení */
+      color: inherit;
+      text-decoration: none;
     }
     a {
-      color: inherit;         /* žádná barva odkazů */
-      text-decoration: none;  /* žádné podtržení odkazů */
+      color: inherit;
+      text-decoration: none;
     }
   }
 }

@@ -69,8 +69,8 @@
 /* ✅ Tablet: 768px–1023px */
 @media (max-width: 1023px) {
   .about {
-    flex-direction: column; /* Zajistí, že i na tabletu je stacked */
-    padding: 2rem 2rem; /* Ještě menší padding pro tablet */
+    flex-direction: column;
+    padding: 2rem 2rem;
   }
 
   .banner{
@@ -92,7 +92,7 @@
       flex: 1 0 40%;
       h4 {
         font-size: 1.25rem;
-        white-space: normal; // povolí zalomení na mobilu
+        white-space: normal;
       }
     }
   }
@@ -157,14 +157,14 @@
       padding: 2rem;
       h4 {
         font-size: 1.25rem;
-        white-space: normal; // povolí zalomení na mobilu
+        white-space: normal;
       }
     }
   }
 
   .about {
-    flex-direction: column; /* Na mobilu stacked určitě */
-    padding: 5% 1.5rem; /* Mobilní padding */
+    flex-direction: column;
+    padding: 5% 1.5rem;
   }
   .sec-newsletter {
     .newsletter-form {
