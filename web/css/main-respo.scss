@@ -1,0 +1,174 @@
+@media (max-width: 1680px) {
+  .about {
+    img {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 1480px) {
+  .about {
+    padding: 2rem 7rem;
+    img {
+      width: 100%;
+    }
+  }
+  .arguments {
+    h4 {
+      font-size: 1.25rem;
+      margin: 0;
+      text-align: left;
+
+    }
+    .selling-argument {
+      padding: 2rem !important;
+    }
+    img {
+      max-width: 3rem !important;
+      height: auto !important;
+    }
+  }
+}
+/* ✅ Notebook: 1024px–1199px */
+@media (max-width: 1199px) {
+  .stats-section {
+    padding: 2rem 2rem;
+    .container {
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      gap: 0px !important;
+    }
+  }
+
+  .about {
+    img {
+      width: 100%;
+    }
+  }
+
+  .sec-reference,
+  .sec-partners,
+  .sec-actual,
+  .sec-conference,
+  .footer-top{
+    padding: 2rem 1.875rem !important;
+    .top {
+      align-items: flex-end;
+      gap: 2rem;
+    }
+      .referencies,
+      .actualities,
+      .conferencies {
+         flex-wrap: wrap;
+  }
+}
+
+}
+
+/* ✅ Tablet: 768px–1023px */
+@media (max-width: 1023px) {
+  .about {
+    flex-direction: column; /* Zajistí, že i na tabletu je stacked */
+    padding: 2rem 2rem; /* Ještě menší padding pro tablet */
+  }
+
+  .banner{
+    h2 {
+      font-size: 3rem;
+
+    }
+  .arguments {
+    display: flex;
+    flex-wrap: wrap;
+    position: static;
+    padding: 2rem;
+    margin: 0px;
+    gap: 1rem;
+
+    .selling-argument {
+      flex-direction: row;
+      padding: 2rem;
+      flex: 1 0 40%;
+      h4 {
+        font-size: 1.25rem;
+        white-space: normal; // povolí zalomení na mobilu
+      }
+    }
+  }
+}
+}
+
+/* ✅ Mobil: 0–767px */
+@media (max-width: 767px) {
+  .sec-newsletter {
+    flex-direction: column;
+  }
+
+  .sec-partners,
+  .sec-actual,
+  .sec-conference{
+    padding: 1rem 1.875rem !important;
+    .top {
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+    }
+    .referencies,
+    .actualities,
+    .conferencies {
+      flex-wrap: nowrap;
+      flex-direction: column !important;
+    }
+  }
+    .sec-reference{
+      padding: 1rem 1.875rem !important;
+
+      .top {
+        align-items: start;
+        flex-direction: column;
+        text-align: start;
+        gap: 2rem;
+          .text {
+          width: 100% !important;
+          }
+        }
+      }
+
+
+
+  .banner {
+    h2 {
+      position: relative;
+      transform: none;
+      top: 0;
+      left: 0;
+      margin-top: 3rem;
+    }
+  }
+  .arguments {
+    display: flex;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+
+    .selling-argument {
+      flex-direction: row;
+      padding: 2rem;
+      h4 {
+        font-size: 1.25rem;
+        white-space: normal; // povolí zalomení na mobilu
+      }
+    }
+  }
+
+  .about {
+    flex-direction: column; /* Na mobilu stacked určitě */
+    padding: 5% 1.5rem; /* Mobilní padding */
+  }
+  .sec-newsletter {
+    .newsletter-form {
+      flex-direction: column;
+    }
+  }
+}

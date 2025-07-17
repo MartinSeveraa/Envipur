@@ -1,0 +1,65 @@
+@charset "UTF-8";
+body {
+  margin: 29px;
+}
+body nav ul {
+  list-style: none; /* odstraní tečky */
+  padding: 0; /* odstraní odsazení vlevo */
+  margin: 0; /* odstraní margin */
+}
+body nav li {
+  color: inherit; /* žádná vlastní barva, zdědí barvu rodiče */
+  text-decoration: none; /* odstraní podtržení */
+}
+body nav a {
+  color: inherit; /* žádná barva odkazů */
+  text-decoration: none; /* žádné podtržení odkazů */
+}
+
+header {
+  padding: 24px 5%;
+}
+header .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .top .right {
+  display: flex;
+  align-items: center;
+}
+header .top .right nav {
+  display: flex;
+  gap: 20px;
+}
+header .top .right nav ul {
+  flex-direction: row;
+  display: flex;
+  gap: 20px;
+}
+header .top .right nav ul li {
+  font-size: 14px;
+}
+header .bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+header .bottom nav {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+}
+header .bottom nav ul {
+  flex-direction: row;
+  display: flex;
+  gap: 48px;
+}
+header .bottom nav img {
+  width: 24px;
+  height: 24px;
+}
+
+/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{% block title %}Welcome!{% endblock %}</title>
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/header.scss') }}" />
+        <link rel="stylesheet" href="{{ asset('css/body.scss') }}" />
+        <link rel="stylesheet" href="{{ asset('css/main.scss') }}" />
+        <link rel="stylesheet" href="{{ asset('css/main-respo.scss') }}" />
+        <link rel="stylesheet" href="{{ asset('css/footer.scss') }}" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+
+<header>
+    {% block header %}
+        <div class="top">
+            <div class="left">
+                <img src="{{ asset('images/left align.png') }}" alt="Logo">
+            </div>
+            <div class="right">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="">Reference</a></li>
+                        <li><a href="">Pro projektanty</a></li>
+                        <li><a href="">O nás</a></li>
+                        <li><a href="">Kariéra</a></li>
+                        <li><a href="">Kalendář akcí</a></li>
+                        <li><a href="">Novinky</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="social-nav">
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <img src="{{ asset('images/facebook.png') }}" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <img src="{{ asset('images/instagram.png') }}" alt="Instagram">
+                    </a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <img src="{{ asset('images/linkedin.png') }}" alt="LinkedIn">
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <img src="{{ asset('images/youtube.png') }}" alt="YouTube">
+                    </a>
+                </nav>
+
+                <button class="lang-button">
+                    <img src="{{ asset('images/flag.png') }}" alt="Vlajka" class="flag-icon">
+                    <span>Česky</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+
+                <!-- CSS-only hamburger menu -->
+                <div class="hamburger-toggle">
+                    <input type="checkbox" id="hamburgerToggle">
+                    <label for="hamburgerToggle" class="hamburger-menu">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </label>
+
+                    <!-- Overlay s labelem pro zavření -->
+                    <div class="mobile-menu-overlay">
+                        <label for="hamburgerToggle"></label>
+                    </div>
+
+                    <div class="mobile-menu">
+                        <div class="mobile-menu-header">
+                            <h3>Menu</h3>
+                            <label for="hamburgerToggle" class="mobile-menu-close">×</label>
+                        </div>
+                        <div class="mobile-menu-content">
+                            <div class="mobile-menu-section">
+                                <div class="search">
+                                    <input type="text" placeholder="Hledat...">
+                                    <button type="submit">
+                                        <img src="{{ asset('images/search.png') }}" alt="Search">
+                                    </button>
+                                </div>
+                                <h3>Domů</h3>
+                                <ul>
+                                    <li><a href="">Reference</a></li>
+                                    <li><a href="">Pro projektanty</a></li>
+                                    <li><a href="">O nás</a></li>
+                                    <li><a href="">Kariéra</a></li>
+                                    <li><a href="">Kalendář akcí</a></li>
+                                    <li><a href="">Novinky</a></li>
+                                </ul>
+                            </div>
+                            <div class="mobile-menu-section">
+                                <h3>Produkty a služby</h3>
+                                <ul>
+                                    <li><a href="">Pro domácnosti</a></li>
+                                    <li><a href="">Pro firmy</a></li>
+                                    <li><a href="">Pro průmysl</a></li>
+                                    <li><a href="">Pro města a obce</a></li>
+                                    <li><a href="">Všechny produkty a služby</a></li>
+                                    <li><a href="">Kontakty</a></li>
+                                </ul>
+
+                                <nav class="social-nav">
+                                    <a href="#" class="social-icon" aria-label="Facebook">
+                                        <img src="{{ asset('images/facebook.png') }}" alt="Facebook">
+                                    </a>
+                                    <a href="#" class="social-icon" aria-label="Instagram">
+                                        <img src="{{ asset('images/instagram.png') }}" alt="Instagram">
+                                    </a>
+                                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                                        <img src="{{ asset('images/linkedin.png') }}" alt="LinkedIn">
+                                    </a>
+                                    <a href="#" class="social-icon" aria-label="YouTube">
+                                        <img src="{{ asset('images/youtube.png') }}" alt="YouTube">
+                                    </a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="bottom-inner">
+                <nav>
+                    <img src="{{ asset('images/home.png') }}" alt="Home">
+                    <ul>
+                        <li><a href="">Pro domácnosti</a></li>
+                        <li><a href="">Pro firmy</a></li>
+                        <li><a href="">Pro průmysl</a></li>
+                        <li><a href="">Pro města a obce</a></li>
+                        <li><a href="">Všechny produkty a služby</a></li>
+                        <li><a href="">Kontakty</a></li>
+                    </ul>
+                    <img src="{{ asset('images/search.png') }}" alt="Search">
+                </nav>
+                <div class="buttons">
+                    <button class="shop">e-shop</button>
+                    <button class="service">servis a reklamace</button>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+</header>
+
+<main>
+    {% block body %}
+    <div class="banner">
+        <h2>Dáváme vodě nový život</h2>
+        <div class="arguments">
+        <div class="selling-argument">
+            <img src="{{ asset('images/envi-icons-anotace.png') }}" alt="">
+            <h4>Domácnosti, chaty
+                ﻿a chalupy</h4>
+        </div>
+        <div class="selling-argument">
+            <img src="{{ asset('images/envi-icons-anotace (1).png') }}" alt="">
+            <h4>Firmy a ubytovací
+                zařízení</h4>
+        </div>
+        <div class="selling-argument">
+            <img src="{{ asset('images/envi-icons-anotace (2).png') }}" alt="">
+            <h4>Města a obce</h4>
+        </div>
+        <div class="selling-argument">
+            <img src="{{ asset('images/envi-icons-anotace (3).png') }}" alt="">
+            <h4>Průmysl</h4>
+        </div>
+        </div>
+    </div>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="stat">
+                <div class="content">
+                <h2>25+</h2>
+                <h4>Téměř 30 let zkušeností</h4>
+                <p>Už více jak čtvrtstoletí dodáváme kvalitní produkty a špičkové služby.</p>
+                </div>
+            </div>
+
+            <div class="stat">
+                <h2>30 tisíc</h2>
+                <h4>Realizací</h4>
+                <p>Tisíce úspěšných realizací a statisíce spokojených zákazníků.</p>
+            </div>
+
+            <div class="stat">
+                <h2>100%</h2>
+                <h4>Český výrobce</h4>
+                <p>S vlastním vývojovým týmem.</p>
+            </div>
+
+            <div class="stat">
+                <h2>Komplexní řešení</h2>
+                <h4>Od návrhu po servis</h4>
+                <p>Vše pod jednou střechou.</p>
+            </div>
+        </div>
+    </section>
+
+        <section class="about">
+            <div class="text">
+                <div class="top">
+                    <h2>ENVI-PUR s.r.o.</h2>
+                    <p>Jsme jedna z nejvýznamnějších českých společností v oblasti čištění, úpravy a recyklace vody v domácnostech, obcích i průmyslových objektech na českém trhu. Jsme dodavatel kvalitních dešťových nádrží. Nabízíme komplexní služby od technologického návrhu, poloprovozního testování a projektu, až po realizaci a následný servis.</p>
+                </div>
+                <div class="bottom">
+                    <h3>Světové zastoupení</h3>
+                    <p>Svoji působnost máme i v zahraničí. V současnosti máme obchodní zastoupení ve více než 30 zemích světa a nové výzvy na nás ještě čekají.</p>
+                </div>
+            </div>
+                <div class="vector">
+                    <img src="{{ asset('images/Group 3.png') }}" alt="">
+                </div>
+        </section>
+
+        <section class="sec-reference">
+            <div class="top">
+            <div class="text">
+                <h2>Naše práce mluví za nás</h2>
+                <p>Máme za sebou tisíce zrealizovaných projektů. V našich referenčních projektech jsou velké i malé čistírny a úpravny vody. Jsme vyhledávaným dodavatelem pro obce, města, průmyslové podniky, a partnerem mnoha projektantů, stavebních firem a prodejců.</p>
+            </div>
+            <div class="ref-button">
+            <button>Všechny reference</button>
+            </div>
+            </div>
+            <div class="referencies">
+                <div class="reference">
+                    <img src="{{ asset('images/Frame 16.png') }}" alt="">
+                    <div class="text">
+                        <h4>Čištění odpadních vod - CONTIPRO</h4>
+                        <p>
+                            Rok vyjádření: <strong>2022</strong><br>
+                            Klient: CONTIPRO a.s.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="reference">
+                    <img src="{{ asset('images/Frame 16 (1).png') }}" alt="">
+                    <div class="text">
+                        <h4>Čištění odpadních vod - CONTIPRO</h4>
+                        <p>
+                            Rok vyjádření: <strong>2022</strong><br>
+                            Klient: CONTIPRO a.s.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="reference">
+                    <img src="{{ asset('images/Frame 16 (2).png') }}" alt="">
+                    <div class="text">
+                        <h4>Čištění odpadních vod - CONTIPRO</h4>
+                        <p>
+                            Rok vyjádření: <strong>2022</strong><br>
+                            Klient: CONTIPRO a.s.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="sec-conference">
+            <div class="top">
+                <div class="text">
+                    <h2>Akce a konference</h2>
+                    <p>Nejbližší akce, na kterých najdete naše odborníky a získáte nové informace.</p>
+                </div>
+                <div class="ref-button">
+                    <button>Všechny akce</button>
+                </div>
+            </div>
+            <div class="conferencies">
+                <div class="conference">
+                    <div class="text">
+                        <div class="top">
+                            <h4>Konference - Provoz vodovodů a kanalizací 2024</h4>
+                        </div>
+                        <div class="mid">
+                            <img src="{{ asset('images/calendar-days.png') }}" alt="">
+                            <p><strong>13. 11. 2024 - 14. 11. 2024</strong><br>Výstaviště v Českých Budějovicích</p>
+                        </div>
+                        <button>Více o akci</button>
+                    </div>
+                </div>
+                <div class="conference">
+                    <div class="text">
+                        <div class="top">
+                            <h4>Konference - Provoz vodovodů a kanalizací 2024</h4>
+                        </div>
+                        <div class="mid">
+                            <img src="{{ asset('images/calendar-days.png') }}" alt="">
+                            <p><strong>13. 11. 2024 - 14. 11. 2024</strong><br>Výstaviště v Českých Budějovicích</p>
+                        </div>
+                        <button>Více o akci</button>
+                    </div>
+                </div>
+                <div class="conference">
+                    <div class="text">
+                        <div class="top">
+                            <h4>Konference - Provoz vodovodů a kanalizací 2024</h4>
+                        </div>
+                        <div class="mid">
+                            <img src="{{ asset('images/calendar-days.png') }}" alt="">
+                            <p><strong>13. 11. 2024 - 14. 11. 2024</strong><br>Výstaviště v Českých Budějovicích</p>
+                        </div>
+                        <button>Více o akci</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="sec-actual">
+            <div class="top">
+                <div class="text">
+                    <h2>Aktuálně</h2>
+                </div>
+                <div class="ref-button">
+                    <button>Všechny aktuality</button>
+                </div>
+            </div>
+            <div class="actualities">
+                <div class="actual">
+                    <img src="{{ asset('images/Frame 16 (3).png') }}" alt="">
+                    <div class="text">
+                        <h4>Dokončení rekonstrukce ČOV Blatná pro 7200 EO: ENVI-PUR dodavatelem technologických částí</h4>
+                        <div class="links">
+                            <p>12.10.2024</p>
+                            <a href="">Celý článek</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="actual">
+                    <img src="{{ asset('images/Frame 16 (4).png') }}" alt="">
+                    <div class="text">
+                        <h4>ENVI-PUR se stává sponzorem Mistrovství Evropy v lakrosu mužů do 20 let</h4>
+                        <div class="links">
+                            <p>12.10.2024</p>
+                            <a href="">Celý článek</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="actual">
+                    <img src="{{ asset('images/Frame 16 (5).png') }}" alt="">
+                    <div class="text">
+                        <h4>Mobilní úprava vody AMAYA pomáha po povodních v Jeseníkách</h4>
+                        <div class="links">
+                            <p>12.10.2024</p>
+                            <a href="">Celý článek</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        
+        <section class="sec-partners">
+            <h2>Naši partneři</h2>
+            <div class="partners">
+                <img src="{{ asset('images/image 2.png') }}" alt="">
+            </div>
+        </section>
+
+        <section class="sec-newsletter">
+            <div class="text">
+                <h4>Odběr novinek na e-mail:</h4>
+                <p>
+                    Registrací souhlasím se
+                    <a href="#" class="privacy-link">zpracováním osobních údajů</a>.
+                </p>
+            </div>
+            <form class="newsletter-form">
+                <div class="input-group">
+                    <input type="email" placeholder="Zadejte váš e-mail…" required>
+                    <img src="{{ asset('images/paper-airplane.png') }}" alt="">
+                </div>
+                <button type="submit" class="register-btn">ZAREGISTROVAT</button>
+            </form>
+
+        </section>
+    {% endblock %}
+</main>
+
+<footer>
+    {% block footer %}
+        <footer class="footer">
+            <div class="footer-top">
+            <div class="footer-column contacts">
+                <h3>Kontakty</h3>
+                <p><strong>ENVI-PUR, s.r.o.</strong><br>
+                    Na Věcovce 13/4, 160 00 Praha 6, Dejvice</p>
+                <p>e-mail: <a href="mailto:info@envi-pur.cz">info@envi-pur.cz</a><br>
+                    <a href="tel:+420381203211">+420 381 203 211</a></p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon facebook" aria-label="Facebook">
+                        <img src="{{ asset('images/facebook.png') }}" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-icon instagram" aria-label="Instagram">
+                        <img src="{{ asset('images/instagram.png') }}" alt="Instagram">
+                    </a>
+                    <a href="#" class="social-icon linkedin" aria-label="LinkedIn">
+                        <img src="{{ asset('images/linkedin.png') }}" alt="LinkedIn">
+                    </a>
+                    <a href="#" class="social-icon youtube" aria-label="YouTube">
+                        <img src="{{ asset('images/youtube.png') }}" alt="YouTube">
+                    </a>
+                </div>
+                <button class="all-contacts-btn">Všechny kontakty</button>
+            </div>
+
+            <div class="footer-column">
+                <h3>Služby</h3>
+                <ul>
+                    <li><a href="#">Domácnosti, chaty a chalupy</a></li>
+                    <li><a href="#">Firmy a ubytovací zařízení</a></li>
+                    <li><a href="#">Města a obce</a></li>
+                    <li><a href="#">Průmysl</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Důležité odkazy</h3>
+                <ul>
+                    <li><a href="#">Partnerství</a></li>
+                    <li><a href="#">Politika společnosti</a></li>
+                    <li><a href="#">GDPR</a></li>
+                    <li><a href="#">Certifikace</a></li>
+                    <li><a href="#">Obchodní podmínky</a></li>
+                    <li><a href="#">Whistleblowing</a></li>
+                    <li><a href="#">Společenská zodpovědnost</a></li>
+                    <li><a href="#">Výzkumné a vývojové projekty (dotace)</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Novinky</h3>
+                <ul>
+                    <li><a href="#">Novinky</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Kalendář akcí</a></li>
+                    <li><a href="#">Kariéra</a></li>
+                    <li><a href="#">Konference</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+                <div class="footer-logo">
+                    <img src="{{ asset('images/Group 1.png') }}" alt="ENVI-PUR logo">
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="content">
+                <div class="text">
+                    <p>©2025 ENVI-PUR, S.R.O.</p>
+                    <nav>
+                    <ul class="footer-links">
+                        <li><a href="#">Prohlášení o přístupnosti</a></li>
+                        <li><a href="#">Mapa stránek</a></li>
+                        <li><a href="#">Ochrana osobních údajů</a></li>
+                        <li><a href="#">Nastavení cookies</a></li>
+                    </ul>
+                    </nav>
+                </div>
+                <div class="footer-powered">
+                    <img src="{{ asset('images/logo-ebr.png') }}" alt="eBRÁNA logo">
+                </div>
+                </div>
+            </div>
+        </footer>
+
+    {% endblock %}
+</footer>
+
+{% block javascripts %}{% endblock %}
+
+</body>
+</html>
