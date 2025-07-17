@@ -13,9 +13,14 @@ button {
   border-radius: 2px;
   text-transform: uppercase;
   background-color: #779A19;
-  color: white;
+  color: #fff;
   font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0E3476 !important;
+  }
 }
 body {
   margin: 0px;

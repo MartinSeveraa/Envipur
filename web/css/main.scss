@@ -39,6 +39,11 @@
        gap: 1rem;
        padding: 3rem;
        color: white;
+       transition: background-color 0.3s ease;
+       &:hover {
+         border-top: #6b9311 3px solid;
+         background-color: rgba(16, 16, 15, 0.9);
+       }
 
        h4 {
          font-size: 1.5rem;
@@ -427,6 +432,11 @@
   .newsletter-form {
     display: flex;
     gap: 10px;
+    button {
+      &:hover {
+        background-color: #779A19 !important;
+      }
+    }
 
     .input-group {
       display: flex;
